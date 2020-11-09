@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+  h1 #{title} : #{instance._id}
+  p #[strong Are you to delete this bookinstance for book #{instance.book.title}?]  
+
+  form(method="post" action="")
+    div.form-group
+      input#instanceid.form-control(name="instanceid" value=instance._id required="true")
+    button.btn.btn-primary  Delete
